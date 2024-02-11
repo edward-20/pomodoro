@@ -1,5 +1,10 @@
 const button = document.querySelector('button');
 button.addEventListener('click', async () => {
+  
+  chrome.action.setBadgeText({
+    text: "ON"
+  })
+
   setInterval(() => {
     let minute = document.getElementById("minute").value;
     let seconds = document.getElementById("seconds").value;
@@ -11,6 +16,10 @@ button.addEventListener('click', async () => {
         document.getElementById("done-banner").classList.remove('d-none');
         // make a sound
         document.getElementById("alarm-sound").play();
+        // show the extension is off
+        chrome.action.setBadgeText({
+          text: "OFF"
+        })
       } 
       // if we've finished the minute
       else {
