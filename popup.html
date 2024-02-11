@@ -11,14 +11,16 @@
 
     <div id="timer">
       <div class="form-floating">
-        <input type="number" placeholder="25" id="hour" class="form-control"/>
-        <label class="form-label" for="typeNumber">Hour</label>
+        <input type="number" placeholder="25" id="minute" class="form-control"/>
+        <label class="form-label" for="typeNumber">Minute</label>
       </div>
       <div class="form-floating">
-        <input type="number" placeholder="25" id="hour" class="form-control"/>
+        <input type="number" placeholder="25" id="seconds" class="form-control"/>
         <label class="form-label" for="typeNumber">Seconds</label>
       </div>
     </div>
+    <div id="done-banner" class="d-none mb-3">Finished!</div>
+    <audio id="alarm-sound" src="mixkit-alarm-tone-996.wav"></audio>
     <button class="btn btn-primary">Start Timer</button>
     <ul></ul>
 
