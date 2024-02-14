@@ -5,9 +5,15 @@ button.addEventListener('click', async () => {
     text: "ON"
   })
 
+  if (seconds <= "0" && minute <= "0") {
+    document.getElementById('invalid-input').classList.remove('d-none');
+  }
+
+  // instead of setting an interval we will have to invoke a "background script" (service worker)
   setInterval(() => {
     let minute = document.getElementById("minute").value;
     let seconds = document.getElementById("seconds").value;
+    
     
     if (seconds === "0") {
       // if we've finished the whole time

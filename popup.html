@@ -9,6 +9,7 @@
   <body>
     <h1 class="title">Pomodoro Timer</h1>
 
+    <!-- Timer Input -->
     <div id="timer">
       <div class="form-floating">
         <input type="number" placeholder="25" id="minute" class="form-control"/>
@@ -19,8 +20,20 @@
         <label class="form-label" for="typeNumber">Seconds</label>
       </div>
     </div>
+
+    <!-- Countdown -->
+    <div id="countdown"></div>
+    
+    <!-- Banners and Miscellaneous -->
     <div id="done-banner" class="d-none mb-3">Finished!</div>
-    <audio id="alarm-sound" src="mixkit-alarm-tone-996.wav"></audio>
+    <audio id="alarm-sound" src="/audio/mixkit-alarm-tone-996.wav"></audio>
+    <div id="invalid-input" class="alert alert-warning alert-dismissible fade show d-none">
+      <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+      Please input a valid time.
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    
+    <!-- Control Panel -->
     <button class="btn btn-primary">Start Timer</button>
     <ul></ul>
 
