@@ -1,14 +1,20 @@
 {
-  "manifest_version": 3,
-  "name": "Tab Manager for Chrome Dev Docs",
+  "name": "Pomodoro Timer",
+  "description": "Use a pomodoro timer to help you study",
   "version": "1.0",
-  "icons": {
-    "16": "images/icon-16.png",
-    "32": "images/icon-32.png",
-    "48": "images/icon-48.png",
-    "128": "images/icon-128.png"
+  "manifest_version": 3,
+  "permissions": ["alarms", "notifications"],
+  "background": {
+    "service_worker": "background.js"
   },
   "action": {
+    "default_title": "Pomodoro",
     "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "drink_water16.png",
+    "32": "drink_water32.png",
+    "48": "drink_water48.png",
+    "128": "drink_water128.png"
   }
 }
