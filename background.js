@@ -7,9 +7,9 @@ chrome.alarms.onAlarm.addListener(() => {
   chrome.action.setBadgeText({ text: '' });
   chrome.notifications.create({
     type: 'basic',
-    iconUrl: 'stay_hydrated.png',
+    iconUrl: "Babel.jpg",
     title: 'Take a Break!',
     message: "You've finished your study/work period, take a well deserved break.",
-    priority: 0
+    priority: 0,
   });
 });
